@@ -1,0 +1,37 @@
+{% extends 'shop/layout/index.html'%}
+{% block title %}
+Register kart | online shopping
+{% endblock title %}
+{% block content %}
+<div class="container" style="margin-top:70px ;">
+    <div class="row">
+        <div class="col-12"><h1>registor</h1></div>
+        <hr style="border-color: #b8bfc2;">
+        {% include 'shop/message.html' %}
+    </div>
+</div>
+    <section class="py-4 my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <form method="post" action="">
+                        {% csrf_token %}
+                        <div class="mb-4">
+                            <label for="" class="form-label">User Name</label>
+                            <input type="text" name="username" id="username" class="form-control" placeholder="Enter username">
+                             
+                        </div>
+                        <div class="mb-4">
+                            <label for="" class="form-label">Email</label>
+                            <input type="password" name="password" id="password" class="form-control" placeholder="Enter password">
+                            
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>    
+        </div>
+    
+    </div>
+    </section>
+</div>
+{% endblock content %}
